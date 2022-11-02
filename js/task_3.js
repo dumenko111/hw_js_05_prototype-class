@@ -8,8 +8,8 @@
 // addItem(item) - получает новый товар и добавляет его к текущим
 // removeItem(item) - получет товар и, если он есть, удаляет его из текущих
 class Storage {
-    constructor(initArray) {
-        this.items = initArray
+  constructor(initArray) {
+    this.items = initArray
   }
   getItems() {
     return this.items
@@ -18,10 +18,11 @@ class Storage {
     return this.items.push(item)
   }
   removeItem(item) {
-    for (const el of this.items) {
-      if (el === item) {
-        this.items.splice()
-      }
+    console.log(this.items.includes(item))
+    if (this.items.includes(item)) {
+      const b = this.items.splice(this.item, 1)
+      console.log(b)
+      console.log(item) //НЕ ПРАЦЮЄ SPLICE
     }
   }
 }
